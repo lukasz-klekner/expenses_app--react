@@ -11,11 +11,11 @@ function Expenses({ expenses }) {
 
   return (
     <div>
-      <ExpensesFilter
-        selectedYear={filteredYear}
-        onChangeFilter={filterChangeHandler}
-      />
       <Card className='expenses'>
+        <ExpensesFilter
+          selectedYear={filteredYear}
+          onChangeFilter={filterChangeHandler}
+        />
         {expenses.map((expense) => (
           <ExpenseItem key={expense.id} expense={expense} />
         ))}
